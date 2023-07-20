@@ -1,0 +1,128 @@
+                             ¨ Qu‚ es DISCAT ?
+                             -----------------
+     ¨Cu ntas veces ha tenido que buscar un archivo entre infinidad de cajas 
+de disquetes? Pues, la agotadora b£squeda se ha acabado. DISCAT le permite
+catalogar todos y cada uno de sus disquetes, de forma que lo £nico que debe
+hacer es introducir el archivo que est  buscando y DISCAT le dir  en qu‚ disco
+puede usted encontrarlo.
+     DISCAT puede almacenar hasta 1000 archivos por disco y 10000 disquetes
+por unidad (A y B, es decir, 20000 disquetes en total ), lo que supone un 
+total de 20 millones de ficheros en total. Tambi‚n es capaz de encontrar hasta 
+1300 ficheros que cumplan las condiciones de b£squeda.
+
+                               Instrucciones
+
+     Primero, trataremos la sencilla instalaci¢n de DISCAT.
+     El archivo ejecutable ( DISCAT.EXE ) deber¡a estar situado en cualquier
+directorio incluido en el PATH. Tambi‚n es conveniente definir una variable de
+entorno ( CATDIR ) que apunte al directorio en el que se encuentran o se
+encontrar n los archivos de datos de DISCAT. Esto se realiza de la siguiente
+forma:
+                       set catdir=unidad:\directorio
+
+     Ahora ha llegado el momento de ejecutar DISCAT por primera vez. Cuando
+lo haga DISCAT le presentar  un mensaje indic ndole que no encontr¢ DISCAT.DAT 
+y esperar  a que le indique si desea crearlo o no. Esto s¢lo ocurrir  si est  
+definida la variable de entorno CATDIR, para evitar tener m£ltiples copias de 
+DISCAT.DAT desperdigadas por todo su disco duro. Si CATDIR no est  definida
+DISCAT se limitar  a informarle de que no se encontr¢ DISCAT.DAT ni la 
+variable de entorno.
+     Suponiendo que ya hemos creado DISCAT.DAT aparecer  un men£ se sencillo 
+manejo. Podemos elegir las opciones con un simple "click" de rat¢n o con
+los cursores e INTRO.
+     Ahora describiremos cada una de las opciones:
+
+     CATALOGAR DISCO: Seleccionando esta opci¢n podremos catalogar un
+disquete. Lo primero que solicitar  DISCAT ser  la unidad en la que se 
+encuentra el disquete que queremos catalogar. Tras introducir la unidad, 
+DISCAT explorar  el disco y catalogar  todos los archivos que contenga.
+Si DISCAT reconoce el disco como uno de los que estaban catalogados simple-
+mente actualizar  los datos que ten¡a sobre ‚l y solicitar  una nota para el 
+disco. Si DISCAT no lo reconoce solicitar  un n£mero nuevo para ‚l. DISCAT 
+propone como n£mero por defecto el primero que encuentra libre.
+     A veces puede ocurrir que debido, bien a que el disquete est‚ protegido
+contra escritura, o bien a que tenga un formato especial (Por ejemplo, los
+disquetes formateados con MAXI form v.1.54a de Herne Data Systems Ltd.) no
+permitir n a DISCAT grabar el n£mero de serie en el que almacena el c¢digo del
+disquete. Si esto ocurre DISCAT catalogar  igualmente el disquete, pero como
+‚ste no queda marcado mediante software y no podr  reconocerlo autom ticamente 
+presentar  un mensaje informando lo sucedido, recordando que la pr¢xima vez
+que catalogue el disco introduzca a mano el mismo n£mero. De lo contrario
+acabar¡a teniendo dos copias catalogadas del mismo disquete aunque con n£meros
+diferentes. (Con respecto al formato antes citado se puede solucionar el 
+problema copiando moment neamente los datos contenidos en el disquete en otro 
+lugar y dar un formato r pido del DOS a ‚ste. Despu‚s se pueden volver a copiar 
+los archivos en ‚l. Tras el formato r pido el disquete admitir  la grabaci¢n 
+del n£mero de serie). 
+     No creo necesario hacer hincapi‚ en que los disquetes se deber¡an guardar
+numerados externamente y ordenados para facilitar su b£squeda.
+     En cuanto al sistema de numeraci¢n DISCAT usa el sistema hexadecimal (si
+usted conoce este sistema num‚rico puede saltar a la siguiente secci¢n). Para
+explicar el sistema hexadecimal comenzaremos repasando como funciona el
+sistema decimal, con el que estamos acostumbrados a trabajar todos los d¡as. 
+El sistema decimal se compone de diez d¡gitos (0-9). Un n£mero decimal est 
+formado por una sucesi¢n de estos d¡gitos entendiendo que el que est  situado
+m s a la derecha representa las unidades (100) , el de su izquierda las 
+decenas (101), el siguiente las centenas (102), etc. De esta forma, podemos 
+calcular el valor del n£mero 623 mediante la suma de tres productos 
+(6ú100+2ú10+3ú1=623).
+     Pues bien, el sistema hexadecimal se diferencia en que se compone de 16
+d¡gitos ( esto es del 0 al 9 seguidos de A, B, C, D, E y F, siendo el valor de 
+‚stos £ltimos 10,11,12,13,14 y 15 respectivamente.) Un n£mero hexadecimal se
+compone de una sucesi¢n de estos d¡gitos considerando que el situado m s a la
+derecha multiplica a 1 (160), y los siguientes (de derecha a izquierda) a 
+16 (161), 256 (162),4096 (163),etc. As¡ 1B3F representar¡a a:
+                 
+                 1x4096+11x256+3x16+15x1=6975 en decimal.
+
+     BUSCAR NOMBRE: Mediante esta opci¢n podremos buscar un determinado
+archivo o grupo de archivos. Primero se nos solicita un nombre a buscar 
+(cuidado, que s¢lo se nos pide el nombre y no la extensi¢n). Tras esto se nos
+pide el modo de b£squeda de entre tres posibles. Pasaremos a describir cada 
+uno de estos modos:
+                EXACTO: Si se elige este modo DISCAT buscar  aquellos
+        archivos que coincidan exactamente con el nombre introducido.
+        Por ejemplo, si introducimos "fich" DISCAT solo aceptar 
+        "FICH.DAT", "FICH.BAT", "FICH.EXE", etc, pero nunca
+        "FICHA.EXE", "AUTOEXEC.BAT" ,"MIFICH.DAT", etc.
+        NORMAL: En este modo DISCAT buscar  todos los ficheros
+        cuyos nombres comiencen con la secuencia introducida. Por
+        ejemplo, si introducimos "fich" DISCAT aceptar  "FICH.DAT",
+        "FICH.BAT", "FICHA.EXE", etc, pero no "AUTOEXEC.BAT" o
+        "MIFICH.BAT".
+                EXTENDIDA: DISCAT buscar  todos los archivos cuyos
+        nombres contengan la secuencia introducida. Por tanto, si
+        introducimos "fich" DISCAT aceptar  "FICH.DAT", "FICHA.EXE",
+        "MIFICH.BAT", pero nunca "AUTOEXEC.BAT".
+
+   Tras elegir el modo DISCAT nos mostrar  los ficheros encontrados o si
+ninguno satisface el patr¢n de b£squeda un mensaje indic ndonoslo.
+     Para pasar de un fichero a otro podemos usar las teclas del cursor o los
+botones correspondientes situados en la parte inferior de la ventana. Para
+salir, se puede pulsar ESCAPE o hacer "click" sobre SALIR.
+
+     BUSCAR EXTENSI¢N:  Esta opci¢n es similar a la anterior y nos permite
+buscar un archivo o grupo de ‚stos por su extensi¢n. DISCAT solo aceptar 
+aquellos archivos cuya extensi¢n sea exactamente igual a la solicitada.
+
+     CONSULTAR DISCO: Esta opci¢n nos permite consultar el contenido de un
+disquete. Tras introducir la unidad y el disquete a consultar DISCAT nos
+presentar  todos los ficheros que contiene de forma similar a la que nos 
+mostraba los ficheros encontrados la opci¢n anterior.
+
+     BORRAR DISCO: Mediante esta opci¢n podemos eliminar de la base de datos
+un disquete. Tras introducir la unidad y el n£mero de disco, DISCAT nos pedir  
+que confirmemos la acci¢n. Si se confirma DISCAT dejar  libre el n£mero de 
+disco y borrar  el fichero que contiene sus datos.
+
+     SALIR: Como su nombre indica, podemos salir de DISCAT seleccionando esta
+opci¢n.
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+      DISCAT fue creado en el verano de 1995 por Luis Mar¡a Cruz V zquez para
+  el concurso de programaci¢n en C organizado por PC ACTUAL.               
+      Agradecimientos a David Jurgen por su HelpPC y a Coronado Enterprises
+  su tutor de C. Ambos me han resultado de gran ayuda.                     
+      Y por supuesto agradecimientos a PC ACTUAL, Ache Sistemas y Database 
+  DM por organizar y patrocinar este concurso.                             

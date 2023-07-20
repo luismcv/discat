@@ -1,0 +1,27 @@
+/****************************************************************************/
+/*                                DISCAT.DEF                                */
+/*    Este  fichero  define  algunas  macros  y constantes  usadas  por     */
+/*  el programa.                                                            */
+/*                                                                          */
+/****************************************************************************/
+
+#define MAXFICHPORDISCO 1000  /* N£mero m ximo de ficheros por disco */
+#define MAXDISC 10000 /* N£mero m ximo de discos por unidad */
+#define MAXENCUENTRA 1300 /* N£mero m ximo de archivos que correspondan con
+									el patr¢n de b£squeda */
+
+#define A 0
+#define B 1
+
+#define TRUE 1
+#define FALSE 0
+
+#define SOLOLECTURA 1
+#define OCULTO 2
+#define SISTEMA 4
+#define DIRECTORIO 16
+#define ARCHIVO 32
+
+#define REINTENTAR 1
+#define CANCELAR 2
+#define FALLO 3
